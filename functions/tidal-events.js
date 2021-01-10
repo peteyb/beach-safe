@@ -4,7 +4,7 @@ const API_ENDPOINT =
   'https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations/0543/TidalEvents?duration=1'
 const { OCI_API_KEY } = process.env
 
-exports.handler = async (event, context) => {
+exports.handler = async function (event, context) {
   return fetch(API_ENDPOINT, {
     headers: {
       Accept: 'application/json',
@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
     .then((response) => response.json())
     .then((data) => ({
       statusCode: 200,
-      body: data,
+      body: JSON.stringify(data),
     }))
     .catch((error) => ({ statusCode: 422, body: String(error) }))
 }
