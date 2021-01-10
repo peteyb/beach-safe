@@ -1,5 +1,9 @@
 # beach-safe
 
+Nuxt PWA to give daily tide times for Bude. 
+
+Hosted on Netlify, using Serverless Functions for pulling data from UK Hydrographic Office
+
 ## Build Setup
 
 ```bash
