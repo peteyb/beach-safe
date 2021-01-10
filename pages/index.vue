@@ -7,7 +7,7 @@
         <span v-if="time.Height">({{ Number(time.Height).toFixed(2) }}m)</span>
  </li>
     </ul>
-    <button @click="$fetch">Refresh</button>
+    <button class="btn-primary" @click="$fetch">Refresh</button>
   </div>
 </template>
 
