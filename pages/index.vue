@@ -4,7 +4,7 @@
     <ul>
       <li v-for="time of times" :key="time.DateTime">
         {{ $nuxt.$dayjs(time.DateTime).format('DDDo MMMM YYYY hh:mmA') }}: {{ time.EventType }}
-        [Height: {{ time.Height.toFixed(2) }}m]
+        [Height: {{ Number(time.Height).toFixed(2) }}m]
  </li>
     </ul>
     <button @click="$fetch">Refresh</button>
