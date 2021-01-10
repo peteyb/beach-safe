@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+const fetch = require('node-fetch')
 
 const API_ENDPOINT =
   'https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations/0543/TidalEvents?duration=1'
