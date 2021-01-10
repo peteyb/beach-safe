@@ -3,7 +3,7 @@
     <h1>Tide times</h1>
     <ul>
       <li v-for="time of times" :key="time.DateTime">
-        {{ $nuxt.$dayjs(time.DateTime).format('DD MM YYYY') }}: {{ time.EventType }}
+        {{ $nuxt.$dayjs(time.DateTime).format('Do MMMM YYYY hh:mmA') }}: {{ time.EventType }}
      [Height: {{ time.Height }}]
  </li>
     </ul>
