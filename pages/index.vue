@@ -7,6 +7,9 @@
         <span v-if="time.Height">({{ Number(time.Height).toFixed(2) }}m)</span>
  </li>
     </ul>
+<h1>Current weather<h1>
+<p>Temperature: {{ weather.main.temp }}&#8451<p>
+<p>Feels like: {{ weather.main.feels_like }}&#8451<p>
     <button class="btn-primary" @click="$fetch">Refresh</button>
   </div>
 </template>
@@ -17,11 +20,14 @@ export default {
     this.times = await this.$axios.$get(
       'https://beach-safe.netlify.app/.netlify/functions/tidal-events'
     )
-    console.log(this.times)
+    this.weather = await this.$axios.$get(
+      'https://beach-safe.netlify.app/.netlify/functions/current-weather'
+    )
   },
   data() {
     return {
       times: [],
+      weather: {}
     }
   },
 }
