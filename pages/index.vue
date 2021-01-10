@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Tide times</h1>
+    <h1>Bude Tide Times</h1>
     <ul>
       <li v-for="time of times" :key="time.DateTime">
         {{ $nuxt.$dayjs(time.DateTime).format('Do MMMM YYYY hh:mmA') }}: {{ time.EventType }}
