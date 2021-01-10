@@ -1,5 +1,5 @@
-import customParseFormat from 'dayjs/plugin/customParseFormat'
+import advancedFormat from 'dayjs/plugin/customParseFormat'
 
 export default ({ app: { $dayjs } }) => {
-  $dayjs.extend(customParseFormat)
+  $dayjs.extend(advancedFormat)
 }
