@@ -3,8 +3,8 @@
     <h1>Tide times</h1>
     <ul>
       <li v-for="time of times" :key="time.DateTime">
-        {{ $nuxt.$dayjs(time.DateTime).format('DDDo MMMM YYYY hh:mmA') }}: {{ time.EventType }}
-        <span v-if="time.Height">[Height: {{ Number(time.Height).toFixed(2) }}m]</span>
+        {{ $nuxt.$dayjs(time.DateTime).format('Do MMMM YYYY hh:mmA') }}: {{ time.EventType }}
+        <span v-if="time.Height">({{ Number(time.Height).toFixed(2) }}m)</span>
  </li>
     </ul>
     <button @click="$fetch">Refresh</button>
