@@ -2,7 +2,7 @@ const fetch = require('node-fetch')
 
 const { OPEN_WEATHER_KEY } = process.env
 const API_ENDPOINT =
-  `api.openweathermap.org/data/2.5/weather?q=Bude&units=metric&appid=${OPEN_WEATHER_KEY}`
+  `https://api.openweathermap.org/data/2.5/weather?q=Bude&units=metric&appid=${OPEN_WEATHER_KEY}`
 
 exports.handler = async function (event, context) {
   return fetch(API_ENDPOINT, {
