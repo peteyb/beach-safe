@@ -7,6 +7,8 @@ const { OCI_API_KEY } = process.env
 exports.handler = async function (event, context) {
   return fetch(API_ENDPOINT, {
     headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true,
       Accept: 'application/json',
       'Ocp-Apim-Subscription-Key': OCI_API_KEY,
     },
