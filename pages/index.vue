@@ -4,7 +4,8 @@
     <ul>
       <li v-for="time of times" :key="time.DateTime">
         {{ time.DateTime }}: {{ time.EventType }}
-      </li>
+     [Height: {{ time.Height }}]
+ </li>
     </ul>
     <button @click="$fetch">Refresh</button>
   </div>
