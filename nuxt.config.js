@@ -57,4 +57,8 @@ export default {
   generate: {
     fallback: true,
   },
+
+  dayjs: {
+    plugins: ['advancedFormat'],
+  },
 }
